@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SFUDataSet6" targetNamespace="http://tempuri.org/SFUDataSet6.xsd" xmlns:mstns="http://tempuri.org/SFUDataSet6.xsd" xmlns="http://tempuri.org/SFUDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="connString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication4.Properties.Settings.GlobalReference.Default.connString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="To_payTableAdapter" GeneratorDataComponentClassName="To_payTableAdapter" Name="To_pay" UserDataComponentName="To_payTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connString (Settings)" DbObjectName="SFU.dbo.To_pay" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Building_name, Counter_code, ResourceName, to_pay_by_indications FROM dbo.To_pay</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Building_name" DataSetColumn="Building_name" />
+              <Mapping SourceColumn="Counter_code" DataSetColumn="Counter_code" />
+              <Mapping SourceColumn="ResourceName" DataSetColumn="ResourceName" />
+              <Mapping SourceColumn="to_pay_by_indications" DataSetColumn="to_pay_by_indications" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SFUDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SFUDataSet6" msprop:Generator_UserDSName="SFUDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="To_pay" msprop:Generator_TableClassName="To_payDataTable" msprop:Generator_TableVarName="tableTo_pay" msprop:Generator_TablePropName="To_pay" msprop:Generator_RowDeletingName="To_payRowDeleting" msprop:Generator_RowChangingName="To_payRowChanging" msprop:Generator_RowEvHandlerName="To_payRowChangeEventHandler" msprop:Generator_RowDeletedName="To_payRowDeleted" msprop:Generator_UserTableName="To_pay" msprop:Generator_RowChangedName="To_payRowChanged" msprop:Generator_RowEvArgName="To_payRowChangeEvent" msprop:Generator_RowClassName="To_payRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Building_name" msprop:Generator_ColumnVarNameInTable="columnBuilding_name" msprop:Generator_ColumnPropNameInRow="Building_name" msprop:Generator_ColumnPropNameInTable="Building_nameColumn" msprop:Generator_UserColumnName="Building_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counter_code" msprop:Generator_ColumnVarNameInTable="columnCounter_code" msprop:Generator_ColumnPropNameInRow="Counter_code" msprop:Generator_ColumnPropNameInTable="Counter_codeColumn" msprop:Generator_UserColumnName="Counter_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ResourceName" msprop:Generator_ColumnVarNameInTable="columnResourceName" msprop:Generator_ColumnPropNameInRow="ResourceName" msprop:Generator_ColumnPropNameInTable="ResourceNameColumn" msprop:Generator_UserColumnName="ResourceName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="to_pay_by_indications" msprop:Generator_ColumnVarNameInTable="columnto_pay_by_indications" msprop:Generator_ColumnPropNameInRow="to_pay_by_indications" msprop:Generator_ColumnPropNameInTable="to_pay_by_indicationsColumn" msprop:Generator_UserColumnName="to_pay_by_indications" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
