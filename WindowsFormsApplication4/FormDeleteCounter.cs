@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApplication4
 {
@@ -19,13 +20,19 @@ namespace WindowsFormsApplication4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //String counter_code = textBox1.Text;
+            string CommandText = "DELETE FROM [Counter] WHERE Counter_code = '" + textBox1.Text + "' ";
+            string Connect = " Data Source =.\\SQLEXPRESS; Initial Catalog = SFU; Persist Security Info= True; User ID=sa; Password=BDiSUBD";
+            
+            SqlConnection myConnection = new SqlConnection(Connect);
+            SqlCommand myCommand = new SqlCommand(CommandText, myConnection);
+            myConnection.Open();
 
-            //SFUDataSet26.CounterRow сounterRow;
-            //сounterRow.Counter_code = counter_code;
-            //sFUDataSet26.Counter.Rows.Clear();
+            myCommand.ExecuteScalar();
+            myConnection.Close();
+            this.counterTableAdapter.Fill(this.sFUDataSet26.Counter); //обновление таблицы (табл. заново помещается в грид)
+        
         }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
@@ -35,6 +42,21 @@ namespace WindowsFormsApplication4
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sFUDataSet26.Counter". При необходимости она может быть перемещена или удалена.
             this.counterTableAdapter.Fill(this.sFUDataSet26.Counter);
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

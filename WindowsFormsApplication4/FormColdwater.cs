@@ -47,5 +47,11 @@ namespace WindowsFormsApplication4
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormInditikationsCw FormInditikationsCw = new FormInditikationsCw();
+            FormInditikationsCw.ShowDialog();
+        }
     }
 }

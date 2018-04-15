@@ -38,18 +38,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sFUDataSet27 = new WindowsFormsApplication4.SFUDataSet27();
-            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.counterTableAdapter = new WindowsFormsApplication4.SFUDataSet27TableAdapters.CounterTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFUDataSet27 = new WindowsFormsApplication4.SFUDataSet27();
+            this.counterTableAdapter = new WindowsFormsApplication4.SFUDataSet27TableAdapters.CounterTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet27)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +85,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -137,20 +138,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(643, 150);
             this.dataGridView1.TabIndex = 10;
             // 
-            // sFUDataSet27
-            // 
-            this.sFUDataSet27.DataSetName = "SFUDataSet27";
-            this.sFUDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // counterBindingSource
-            // 
-            this.counterBindingSource.DataMember = "Counter";
-            this.counterBindingSource.DataSource = this.sFUDataSet27;
-            // 
-            // counterTableAdapter
-            // 
-            this.counterTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Counter_number";
@@ -188,6 +175,20 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Breaking_date";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // counterBindingSource
+            // 
+            this.counterBindingSource.DataMember = "Counter";
+            this.counterBindingSource.DataSource = this.sFUDataSet27;
+            // 
+            // sFUDataSet27
+            // 
+            this.sFUDataSet27.DataSetName = "SFUDataSet27";
+            this.sFUDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // counterTableAdapter
+            // 
+            this.counterTableAdapter.ClearBeforeFill = true;
+            // 
             // FormAddCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,8 +207,8 @@
             this.Text = "Добавление счетчика";
             this.Load += new System.EventHandler(this.FormAddCounter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet27)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

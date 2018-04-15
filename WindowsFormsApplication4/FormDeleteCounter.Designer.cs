@@ -34,18 +34,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sFUDataSet26 = new WindowsFormsApplication4.SFUDataSet26();
-            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.counterTableAdapter = new WindowsFormsApplication4.SFUDataSet26TableAdapters.CounterTableAdapter();
             this.counternumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countercodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resourcecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.installationdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.breakingdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFUDataSet26 = new WindowsFormsApplication4.SFUDataSet26();
+            this.counterTableAdapter = new WindowsFormsApplication4.SFUDataSet26TableAdapters.CounterTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet26)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -76,6 +76,7 @@
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Код счетчика";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -83,6 +84,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -100,20 +102,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(643, 164);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // sFUDataSet26
-            // 
-            this.sFUDataSet26.DataSetName = "SFUDataSet26";
-            this.sFUDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // counterBindingSource
-            // 
-            this.counterBindingSource.DataMember = "Counter";
-            this.counterBindingSource.DataSource = this.sFUDataSet26;
-            // 
-            // counterTableAdapter
-            // 
-            this.counterTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // counternumberDataGridViewTextBoxColumn
             // 
@@ -152,6 +141,20 @@
             this.breakingdateDataGridViewTextBoxColumn.HeaderText = "Breaking_date";
             this.breakingdateDataGridViewTextBoxColumn.Name = "breakingdateDataGridViewTextBoxColumn";
             // 
+            // counterBindingSource
+            // 
+            this.counterBindingSource.DataMember = "Counter";
+            this.counterBindingSource.DataSource = this.sFUDataSet26;
+            // 
+            // sFUDataSet26
+            // 
+            this.sFUDataSet26.DataSetName = "SFUDataSet26";
+            this.sFUDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // counterTableAdapter
+            // 
+            this.counterTableAdapter.ClearBeforeFill = true;
+            // 
             // FormDeleteCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,8 +169,8 @@
             this.Text = "Удаление счетчика";
             this.Load += new System.EventHandler(this.FormDeleteCounter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.counterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFUDataSet26)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

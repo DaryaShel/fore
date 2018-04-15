@@ -42,5 +42,11 @@ namespace WindowsFormsApplication4
 
             e.Graphics.DrawImage(objBmp, 250, 90);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormIndicationsE FormIndicationsE = new FormIndicationsE();
+            FormIndicationsE.ShowDialog();
+        }
     }
 }
